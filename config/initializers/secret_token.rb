@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-Biscan::Application.config.secret_key_base = 'ab0cd3688898f9675b15f7073b1b66b148dd16f3959c22e959345274b0ef398cc0be0d6abb6884ad7871fb072185ac8bf88eaf8057b017d45b1443f9d9f5fe11'
+Biscan::Application.config.secret_key_base = ENV['SECRET_KEY_BASE'] || 'ab0cd3688898f9675b15f7073b1b66b148dd16f3959c22e959345274b0ef398cc0be0d6abb6884ad7871fb072185ac8bf88eaf8057b017d45b1443f9d9f5fe11'
