@@ -1,28 +1,29 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+ビジネスモデルキャンパスの登録更新を行うアプリです
 
-Things you may want to cover:
+```shell
+ $ git clone biscan git@github.com:kazuaking/biscan.git
+```
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+
+### TODO
+
+* twitter biitstrap
+* login機能
+* 履歴機能
+* ビジネスモデルキャンバスの登録
+* ビジネスモデルキャンバスの更新
+* ビジネスモデルキャンバスの履歴参照
+* 更新時のメール送信
+
+
+
+
+
+
+
+
