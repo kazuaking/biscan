@@ -2,12 +2,17 @@
 
 ビジネスモデルキャンパスの登録更新を行うアプリです
 
+
+### 環境
+
+* ruby  2.1
+* rails 4.04
+* posgressql(かり)
+
+
 ```shell
  $ git clone biscan git@github.com:kazuaking/biscan.git
 ```
-
-```
-
 
 
 ### TODO
