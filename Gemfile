@@ -38,6 +38,7 @@ group :doc do
 end
 
 
+gem 'devise'
 
 
 # Bower Manager => https://rails-assets.org/
