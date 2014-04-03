@@ -1,0 +1,9 @@
+= simple_form_for(@business_model_canvase) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :name
+    = f.input :description
+
+  .form-actions
+    = f.button :submit

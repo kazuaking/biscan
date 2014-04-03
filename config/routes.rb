@@ -1,4 +1,6 @@
 Biscan::Application.routes.draw do
+  resources :business_model_canvases
+
   devise_for :users
   root :to => 'products#index'
   resources :products

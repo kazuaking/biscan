@@ -1,0 +1,12 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @business_model_canvase.name
+%p
+  %b Description:
+  = @business_model_canvase.description
+
+= link_to 'Edit', edit_business_model_canvase_path(@business_model_canvase)
+\|
+= link_to 'Back', business_model_canvases_path
