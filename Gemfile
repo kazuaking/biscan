@@ -40,6 +40,10 @@ end
 
 gem 'devise'
 
+# use bootstap3
+# gem 'bootstrap-sass-rails'
+# use bootstap2
+gem 'twitter-bootstrap-rails'
 
 # Bower Manager => https://rails-assets.org/
 source 'https://rails-assets.org'
@@ -99,8 +103,8 @@ gem 'nokogiri'
 # App configuration
 gem 'figaro'
 
-# Rack Profiler
-gem 'rack-mini-profiler'
+# # Rack Profiler
+# gem 'rack-mini-profiler'
 
 # Hash extensions
 gem 'hashie'
