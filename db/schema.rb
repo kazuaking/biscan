@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140403155331) do
+ActiveRecord::Schema.define(version: 20140404133816) do
 
   create_table "business_model_canvases", force: true do |t|
     t.string   "name"
@@ -19,6 +19,17 @@ ActiveRecord::Schema.define(version: 20140403155331) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "customer_segments", force: true do |t|
+    t.integer  "business_model_canvase_id"
+    t.string   "name"
+    t.text     "description"
+    t.integer  "updated_by"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "customer_segments", ["business_model_canvase_id"], name: "index_customer_segments_on_business_model_canvase_id", using: :btree
 
   create_table "products", force: true do |t|
     t.string   "name"

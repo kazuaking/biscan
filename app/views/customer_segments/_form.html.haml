@@ -1,0 +1,11 @@
+= simple_form_for(@customer_segment) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.association :business_model_canvase
+    = f.input :name
+    = f.input :description
+    = f.input :updated_by
+
+  .form-actions
+    = f.button :submit

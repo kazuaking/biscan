@@ -1,0 +1,25 @@
+%h1 Listing customer_segments
+
+%table
+  %tr
+    %th Business model canvase
+    %th Name
+    %th Description
+    %th Updated by
+    %th
+    %th
+    %th
+
+  - @customer_segments.each do |customer_segment|
+    %tr
+      %td= customer_segment.business_model_canvase
+      %td= customer_segment.name
+      %td= customer_segment.description
+      %td= customer_segment.updated_by
+      %td= link_to 'Show', customer_segment
+      %td= link_to 'Edit', edit_customer_segment_path(customer_segment)
+      %td= link_to 'Destroy', customer_segment, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Customer segment', new_customer_segment_path

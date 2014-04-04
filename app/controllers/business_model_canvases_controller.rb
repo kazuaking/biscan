@@ -66,6 +66,10 @@ class BusinessModelCanvasesController < ApplicationController
     def set_business_model_canvase
       @business_model_canvase = BusinessModelCanvase.find(params[:id])
     end
+    def set_customer_segment
+      @customer_segment = @business_model_canvase.customer_segment
+      @customer_segment ||= @business_model_canvase.build_customer_segment
+    end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def business_model_canvase_params

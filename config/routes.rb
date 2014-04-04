@@ -1,4 +1,6 @@
 Biscan::Application.routes.draw do
+  resources :customer_segments
+
   resources :business_model_canvases
 
   devise_for :users
