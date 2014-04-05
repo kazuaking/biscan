@@ -4,6 +4,9 @@
   .form-inputs
     = f.input :name
     = f.input :description
-
+  %h2 customer_segment
+  = f.simple_fields_for :customer_segment do |cs|
+    = cs.input :name
+    = cs.input :description, as: :text
   .form-actions
     = f.button :submit
