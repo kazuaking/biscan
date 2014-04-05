@@ -4,7 +4,7 @@ Biscan::Application.routes.draw do
   resources :business_model_canvases
 
   devise_for :users
-  root :to => 'products#index'
+  root :to => 'business_model_canvases#index'
   resources :products
 
   # The priority is based upon order of creation: first created -> highest priority.

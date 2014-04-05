@@ -4,7 +4,7 @@
   .form-inputs
     = f.input :name
     = f.input :description
-  %h2 customer_segment
+  %h2 顧客セグメント
   = f.simple_fields_for :customer_segment do |cs|
     = cs.input :name
     = cs.input :description, as: :text
