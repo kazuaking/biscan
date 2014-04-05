@@ -12,10 +12,17 @@
     %tr
       %td= business_model_canvase.name
       %td= business_model_canvase.description
-      %td= link_to 'Show', business_model_canvase
-      %td= link_to 'Edit', edit_business_model_canvase_path(business_model_canvase)
-      %td= link_to 'Destroy', business_model_canvase, :method => :delete, :data => { :confirm => 'Are you sure?' }
+      %td
+        = link_to business_model_canvase, class: 'btn' do
+          %i.icon-list-alt
+      %td
+        = link_to edit_business_model_canvase_path(business_model_canvase), class: 'btn' do
+          %i.icon-edit
+      %td
+        = link_to business_model_canvase, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn'  do
+          %i.icon-remove
 
 %br
 
-= link_to 'New Business model canvase', new_business_model_canvase_path
+= link_to new_business_model_canvase_path, class: 'btn' do
+  %i.icon-plus 新規作成
