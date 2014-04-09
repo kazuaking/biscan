@@ -7,6 +7,33 @@
   %b Description:
   = @business_model_canvase.description
 
-= link_to 'Edit', edit_business_model_canvase_path(@business_model_canvase)
-\|
-= link_to 'Back', business_model_canvases_path
+%table.table.table-bordered
+  %tr
+    %td(rowspan=2)
+      %h4 パートナー
+    %td
+      %h4 主要活動
+    %td(rowspan=2 colspan=2)
+      %h4 価値提案
+    %td
+      %h4 顧客との関係
+    %td(rowspan=2)
+      %h4 顧客セグメント
+      - @customer_segments.each do |cs|
+        = cs.name
+  %tr
+    %td
+      %h4 経営資源
+    %td
+      %h4 チャネル
+  %tr
+    %td(colspan=3)
+      %h4 コスト資源
+    %td(colspan=3)
+      %h4 収益の流れ
+
+= link_to edit_business_model_canvase_path(@business_model_canvase), class: 'btn' do
+  %i.icon-edit
+= link_to business_model_canvases_path, class: 'btn' do
+  %i.icon-list
+

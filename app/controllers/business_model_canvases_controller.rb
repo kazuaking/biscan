@@ -66,6 +66,7 @@ class BusinessModelCanvasesController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_business_model_canvase
       @business_model_canvase = BusinessModelCanvase.find(params[:id])
+      @customer_segments = @business_model_canvase.customer_segments
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
