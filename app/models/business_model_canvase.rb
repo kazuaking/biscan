@@ -1,4 +1,4 @@
 class BusinessModelCanvase < ActiveRecord::Base
-  has_one :customer_segment
-  accepts_nested_attributes_for :customer_segment
+  has_many :customer_segments
+  accepts_nested_attributes_for :customer_segments, reject_if: :all_blank, allow_destroy: true
 end

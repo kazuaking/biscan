@@ -5,8 +5,9 @@
     = f.input :name
     = f.input :description
   %h2 顧客セグメント
-  = f.simple_fields_for :customer_segment do |cs|
+  = f.simple_fields_for :customer_segments do |cs|
     = cs.input :name
     = cs.input :description, as: :text
+    / = render 'customer_segments/form', :f => cs
   .form-actions
     = f.button :submit

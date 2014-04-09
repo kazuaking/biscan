@@ -15,7 +15,7 @@ class BusinessModelCanvasesController < ApplicationController
   # GET /business_model_canvases/new
   def new
     @business_model_canvase = BusinessModelCanvase.new
-    @business_model_canvase.build_customer_segment
+    @business_model_canvase.customer_segments.build
   end
 
   # GET /business_model_canvases/1/edit
@@ -71,7 +71,7 @@ class BusinessModelCanvasesController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def business_model_canvase_params
       params.require(:business_model_canvase).permit(:name, :description,
-        customer_segment_attributes: [:name, :description]
+        customer_segments_attributes: [:id, :business_model_canvase_id, :name, :description]
         )
     end
 end
