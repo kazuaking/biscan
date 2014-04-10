@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Business model canvase:
+  = @customer_relationship.business_model_canvase
+%p
+  %b Name:
+  = @customer_relationship.name
+%p
+  %b Description:
+  = @customer_relationship.description
+%p
+  %b Updated by:
+  = @customer_relationship.updated_by
+
+= link_to 'Edit', edit_customer_relationship_path(@customer_relationship)
+\|
+= link_to 'Back', customer_relationships_path

@@ -1,4 +1,20 @@
 Biscan::Application.routes.draw do
+  resources :cost_structures
+
+  resources :key_partnerships
+
+  resources :key_activities
+
+  resources :key_resources
+
+  resources :revenue_streams
+
+  resources :customer_relationships
+
+  resources :channels
+
+  resources :value_propositions
+
   resources :customer_segments
 
   resources :business_model_canvases

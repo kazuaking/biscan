@@ -1,0 +1,25 @@
+%h1 Listing key_resources
+
+%table
+  %tr
+    %th Business model canvase
+    %th Name
+    %th Description
+    %th Updated by
+    %th
+    %th
+    %th
+
+  - @key_resources.each do |key_resource|
+    %tr
+      %td= key_resource.business_model_canvase
+      %td= key_resource.name
+      %td= key_resource.description
+      %td= key_resource.updated_by
+      %td= link_to 'Show', key_resource
+      %td= link_to 'Edit', edit_key_resource_path(key_resource)
+      %td= link_to 'Destroy', key_resource, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Key resource', new_key_resource_path

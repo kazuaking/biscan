@@ -1,0 +1,25 @@
+%h1 Listing cost_structures
+
+%table
+  %tr
+    %th Business model canvase
+    %th Name
+    %th Description
+    %th Updated by
+    %th
+    %th
+    %th
+
+  - @cost_structures.each do |cost_structure|
+    %tr
+      %td= cost_structure.business_model_canvase
+      %td= cost_structure.name
+      %td= cost_structure.description
+      %td= cost_structure.updated_by
+      %td= link_to 'Show', cost_structure
+      %td= link_to 'Edit', edit_cost_structure_path(cost_structure)
+      %td= link_to 'Destroy', cost_structure, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Cost structure', new_cost_structure_path

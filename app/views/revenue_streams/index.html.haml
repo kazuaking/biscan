@@ -1,0 +1,25 @@
+%h1 Listing revenue_streams
+
+%table
+  %tr
+    %th Business model canvase
+    %th Name
+    %th Description
+    %th Updated by
+    %th
+    %th
+    %th
+
+  - @revenue_streams.each do |revenue_stream|
+    %tr
+      %td= revenue_stream.business_model_canvase
+      %td= revenue_stream.name
+      %td= revenue_stream.description
+      %td= revenue_stream.updated_by
+      %td= link_to 'Show', revenue_stream
+      %td= link_to 'Edit', edit_revenue_stream_path(revenue_stream)
+      %td= link_to 'Destroy', revenue_stream, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Revenue stream', new_revenue_stream_path

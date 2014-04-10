@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Business model canvase:
+  = @key_activity.business_model_canvase
+%p
+  %b Name:
+  = @key_activity.name
+%p
+  %b Description:
+  = @key_activity.description
+%p
+  %b Updated by:
+  = @key_activity.updated_by
+
+= link_to 'Edit', edit_key_activity_path(@key_activity)
+\|
+= link_to 'Back', key_activities_path
