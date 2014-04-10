@@ -20,7 +20,7 @@
     %td(rowspan=2)
       %h4 顧客セグメント
       - @customer_segments.each do |cs|
-        = cs.name
+        = link_to cs.name, edit_customer_segment_path(cs)
   %tr
     %td
       %h4 経営資源
