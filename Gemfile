@@ -79,6 +79,7 @@ gem 'quiet_assets'
 
 # Form Builders
 gem 'simple_form'
+gem 'cocoon'
 
 # # Process Management
 gem 'foreman'
