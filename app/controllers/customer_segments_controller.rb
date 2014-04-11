@@ -1,4 +1,5 @@
 class CustomerSegmentsController < ApplicationController
+  include BusinessModelCanvaseGetable
   before_action :set_customer_segment, only: [:show, :edit, :update, :destroy]
 
   # GET /customer_segments

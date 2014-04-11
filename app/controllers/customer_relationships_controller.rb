@@ -1,4 +1,5 @@
 class CustomerRelationshipsController < ApplicationController
+  include BusinessModelCanvaseGetable
   before_action :set_customer_relationship, only: [:show, :edit, :update, :destroy]
 
   # GET /customer_relationships

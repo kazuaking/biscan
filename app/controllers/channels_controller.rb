@@ -1,4 +1,5 @@
 class ChannelsController < ApplicationController
+  include BusinessModelCanvaseGetable
   before_action :set_channel, only: [:show, :edit, :update, :destroy]
 
   # GET /channels

@@ -1,4 +1,5 @@
 class CostStructuresController < ApplicationController
+  include BusinessModelCanvaseGetable
   before_action :set_cost_structure, only: [:show, :edit, :update, :destroy]
 
   # GET /cost_structures

@@ -1,4 +1,5 @@
 class KeyActivitiesController < ApplicationController
+  include BusinessModelCanvaseGetable
   before_action :set_key_activity, only: [:show, :edit, :update, :destroy]
 
   # GET /key_activities

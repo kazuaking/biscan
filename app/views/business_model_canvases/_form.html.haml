@@ -5,6 +5,7 @@
     = f.input :name
     = f.input :description
   %h2 顧客セグメント
+  #customer_segments
   = f.simple_fields_for :customer_segments do |m|
     = m.input :name
     = m.input :description, as: :text

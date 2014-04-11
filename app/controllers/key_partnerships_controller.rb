@@ -1,4 +1,5 @@
 class KeyPartnershipsController < ApplicationController
+  include BusinessModelCanvaseGetable
   before_action :set_key_partnership, only: [:show, :edit, :update, :destroy]
 
   # GET /key_partnerships

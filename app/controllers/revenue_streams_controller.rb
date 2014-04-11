@@ -1,4 +1,5 @@
 class RevenueStreamsController < ApplicationController
+  include BusinessModelCanvaseGetable
   before_action :set_revenue_stream, only: [:show, :edit, :update, :destroy]
 
   # GET /revenue_streams

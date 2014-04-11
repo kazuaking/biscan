@@ -1,4 +1,5 @@
 class ValuePropositionsController < ApplicationController
+  include BusinessModelCanvaseGetable
   before_action :set_value_proposition, only: [:show, :edit, :update, :destroy]
 
   # GET /value_propositions

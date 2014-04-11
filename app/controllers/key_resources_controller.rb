@@ -1,4 +1,5 @@
 class KeyResourcesController < ApplicationController
+  include BusinessModelCanvaseGetable
   before_action :set_key_resource, only: [:show, :edit, :update, :destroy]
 
   # GET /key_resources
