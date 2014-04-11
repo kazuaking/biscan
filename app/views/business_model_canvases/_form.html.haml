@@ -4,51 +4,69 @@
   .form-inputs
     = f.input :name
     = f.input :description
+  %h2 パートナー
+  #key_partnerships
+    = f.simple_fields_for :key_partnerships do |m|
+      = render 'piece_fields', f: m
+    .links
+      = link_to_add_association f, :key_partnerships, class: 'btn', partial: 'piece_fields' do
+        %i.icon-plus
+  %h2 主要活動
+  #key_activities
+    = f.simple_fields_for :key_activities do |m|
+      = render 'piece_fields', f: m
+    .links
+      = link_to_add_association f, :key_activities, class: 'btn', partial: 'piece_fields' do
+        %i.icon-plus
+  %h2 経営資源
+  #key_resources
+    = f.simple_fields_for :key_resources do |m|
+      = render 'piece_fields', f: m
+    .links
+      = link_to_add_association f, :key_resources, class: 'btn', partial: 'piece_fields' do
+        %i.icon-plus
+  %h2 価値提案
+  #value_propositions
+    = f.simple_fields_for :value_propositions do |m|
+      = render 'piece_fields', f: m
+    .links
+      = link_to_add_association f, :value_propositions, class: 'btn', partial: 'piece_fields' do
+        %i.icon-plus
+  %h2 顧客との関係
+  #customer_relationships
+    = f.simple_fields_for :customer_relationships do |m|
+      = render 'piece_fields', f: m
+    .links
+      = link_to_add_association f, :customer_relationships, class: 'btn', partial: 'piece_fields' do
+        %i.icon-plus
+  %h2 チャネル
+  #channels
+    = f.simple_fields_for :channels do |m|
+      = render 'piece_fields', f: m
+    .links
+      = link_to_add_association f, :channels, class: 'btn', partial: 'piece_fields' do
+        %i.icon-plus
   %h2 顧客セグメント
   #customer_segments
-  = f.simple_fields_for :customer_segments do |m|
-    = m.input :name
-    = m.input :description, as: :text
-
-  %h2 価値提案
-  = f.simple_fields_for :value_propositions do |m|
-    = m.input :name
-    = m.input :description, as: :text
-
-  %h2 チャネル
-  = f.simple_fields_for :channels do |m|
-    = m.input :name
-    = m.input :description, as: :text
-
-  %h2 顧客との関係
-  = f.simple_fields_for :customer_relationships do |m|
-    = m.input :name
-    = m.input :description, as: :text
-
+    = f.simple_fields_for :customer_segments do |m|
+      = render 'piece_fields', f: m
+    .links
+      = link_to_add_association f, :customer_segments, class: 'btn', partial: 'piece_fields' do
+        %i.icon-plus
   %h2 収益の流れ
-  = f.simple_fields_for :revenue_streams do |m|
-    = m.input :name
-    = m.input :description, as: :text
-
-  %h2 経営資源
-  = f.simple_fields_for :key_resources do |m|
-    = m.input :name
-    = m.input :description, as: :text
-
-  %h2 主要活動
-  = f.simple_fields_for :key_activities do |m|
-    = m.input :name
-    = m.input :description, as: :text
-
-  %h2 パートナー
-  = f.simple_fields_for :key_partnerships do |m|
-    = m.input :name
-    = m.input :description, as: :text
-
+  #revenue_streams
+    = f.simple_fields_for :revenue_streams do |m|
+      = render 'piece_fields', f: m
+    .links
+      = link_to_add_association f, :revenue_streams, class: 'btn', partial: 'piece_fields' do
+        %i.icon-plus
   %h2 コスト構造
-  = f.simple_fields_for :cost_structures do |m|
-    = m.input :name
-    = m.input :description, as: :text
+  #cost_structures
+    = f.simple_fields_for :cost_structures do |m|
+      = render 'piece_fields', f: m
+    .links
+      = link_to_add_association f, :cost_structures, class: 'btn', partial: 'piece_fields' do
+        %i.icon-plus
 
   .form-actions
     = f.button :submit

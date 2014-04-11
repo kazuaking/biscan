@@ -99,15 +99,15 @@ class BusinessModelCanvasesController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def business_model_canvase_params
       params.require(:business_model_canvase).permit(:name, :description,
-        customer_segments_attributes: [:id, :business_model_canvase_id, :name, :description],
-        value_propositions_attributes: [:id, :business_model_canvase_id, :name, :description],
-        channels_attributes: [:id, :business_model_canvase_id, :name, :description],
-        customer_relationships_attributes: [:id, :business_model_canvase_id, :name, :description],
-        revenue_streams_attributes: [:id, :business_model_canvase_id, :name, :description],
-        key_resources_attributes: [:id, :business_model_canvase_id, :name, :description],
-        key_activities_attributes: [:id, :business_model_canvase_id, :name, :description],
-        key_partnerships_attributes: [:id, :business_model_canvase_id, :name, :description],
-        cost_structures_attributes: [:id, :business_model_canvase_id, :name, :description],
+        customer_segments_attributes: [:id, :business_model_canvase_id, :name, :description, :_destroy],
+        value_propositions_attributes: [:id, :business_model_canvase_id, :name, :description, :_destroy],
+        channels_attributes: [:id, :business_model_canvase_id, :name, :description, :_destroy],
+        customer_relationships_attributes: [:id, :business_model_canvase_id, :name, :description, :_destroy],
+        revenue_streams_attributes: [:id, :business_model_canvase_id, :name, :description, :_destroy],
+        key_resources_attributes: [:id, :business_model_canvase_id, :name, :description, :_destroy],
+        key_activities_attributes: [:id, :business_model_canvase_id, :name, :description, :_destroy],
+        key_partnerships_attributes: [:id, :business_model_canvase_id, :name, :description, :_destroy],
+        cost_structures_attributes: [:id, :business_model_canvase_id, :name, :description, :_destroy],
         )
     end
 end
