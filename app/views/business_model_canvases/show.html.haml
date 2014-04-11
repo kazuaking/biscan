@@ -11,26 +11,42 @@
   %tr
     %td(rowspan=2)
       %h4 パートナー
+      - @key_partnerships.each do |m|
+        %div= link_to m.name || 'タイトルなし', edit_key_partnership_path(m)
     %td
       %h4 主要活動
+      - @key_activities.each do |m|
+        %div= link_to m.name || 'タイトルなし', edit_key_activity_path(m)
     %td(rowspan=2 colspan=2)
       %h4 価値提案
+      - @value_propositions.each do |m|
+        %div= link_to m.name || 'タイトルなし', edit_value_proposition_path(m)
     %td
       %h4 顧客との関係
+      - @customer_relationships.each do |m|
+        %div= link_to m.name || 'タイトルなし', edit_customer_relationship_path(m)
     %td(rowspan=2)
       %h4 顧客セグメント
-      - @customer_segments.each do |cs|
-        = link_to cs.name, edit_customer_segment_path(cs)
+      - @customer_segments.each do |m|
+        %div= link_to m.name || 'タイトルなし', edit_customer_segment_path(m)
   %tr
     %td
       %h4 経営資源
+      - @key_resources.each do |m|
+        %div= link_to m.name || 'タイトルなし', edit_key_resource_path(m)
     %td
       %h4 チャネル
+      - @channels.each do |m|
+        %div= link_to m.name || 'タイトルなし', edit_channel_path(m)
   %tr
     %td(colspan=3)
       %h4 コスト資源
+      - @cost_structures.each do |m|
+        %div= link_to m.name || 'タイトルなし', edit_customer_segment_path(m)
     %td(colspan=3)
       %h4 収益の流れ
+      - @revenue_streams.each do |m|
+        %div= link_to m.name || 'タイトルなし', edit_customer_segment_path(m)
 
 = link_to edit_business_model_canvase_path(@business_model_canvase), class: 'btn' do
   %i.icon-edit
