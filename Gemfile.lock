@@ -218,6 +218,8 @@ GEM
       json (~> 1.4)
     ref (1.0.5)
     request_store (1.0.5)
+    rest_in_place (2.4.0)
+      rails (>= 3.1)
     rspec (2.14.1)
       rspec-core (~> 2.14.0)
       rspec-expectations (~> 2.14.0)
@@ -331,6 +333,7 @@ DEPENDENCIES
   rails-flog
   rails_12factor
   rake_shared_context
+  rest_in_place
   rspec-rails
   sass-rails (~> 4.0.2)
   sdoc

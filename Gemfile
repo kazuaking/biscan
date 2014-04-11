@@ -45,6 +45,10 @@ gem 'devise'
 # use bootstap2
 gem 'twitter-bootstrap-rails'
 
+
+gem 'rest_in_place'
+
+
 # Bower Manager => https://rails-assets.org/
 source 'https://rails-assets.org'
 
