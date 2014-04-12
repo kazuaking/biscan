@@ -45,6 +45,10 @@ gem 'devise'
 # use bootstap2
 gem 'twitter-bootstrap-rails'
 
+
+gem 'rest_in_place'
+
+
 # Bower Manager => https://rails-assets.org/
 source 'https://rails-assets.org'
 
@@ -75,6 +79,7 @@ gem 'quiet_assets'
 
 # Form Builders
 gem 'simple_form'
+gem 'cocoon'
 
 # # Process Management
 gem 'foreman'

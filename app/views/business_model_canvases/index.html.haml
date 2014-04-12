@@ -1,12 +1,14 @@
 %h1 ビジネスモデルキャンバス一覧
 
-%table
+
+= link_to new_business_model_canvase_path, class: 'btn' do
+  %i.icon-plus 新規作成
+
+%table.table
   %tr
     %th 名前
     %th 詳細
-    %th
-    %th
-    %th
+    %th action
 
   - @business_model_canvases.each do |business_model_canvase|
     %tr
@@ -15,14 +17,10 @@
       %td
         = link_to business_model_canvase, class: 'btn' do
           %i.icon-list-alt
-      %td
         = link_to edit_business_model_canvase_path(business_model_canvase), class: 'btn' do
           %i.icon-edit
-      %td
         = link_to business_model_canvase, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn'  do
           %i.icon-remove
 
 %br
 
-= link_to new_business_model_canvase_path, class: 'btn' do
-  %i.icon-plus 新規作成

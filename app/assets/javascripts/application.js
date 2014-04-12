@@ -15,4 +15,6 @@
 //= require jquery_ujs
 //= require twitter/bootstrap
 //= require turbolinks
+//= require rest_in_place
+//= require cocoon
 //= require_tree .

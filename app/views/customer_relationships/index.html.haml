@@ -1,0 +1,25 @@
+%h1 Listing customer_relationships
+
+%table
+  %tr
+    %th Business model canvase
+    %th Name
+    %th Description
+    %th Updated by
+    %th
+    %th
+    %th
+
+  - @customer_relationships.each do |customer_relationship|
+    %tr
+      %td= customer_relationship.business_model_canvase
+      %td= customer_relationship.name
+      %td= customer_relationship.description
+      %td= customer_relationship.updated_by
+      %td= link_to 'Show', customer_relationship
+      %td= link_to 'Edit', edit_customer_relationship_path(customer_relationship)
+      %td= link_to 'Destroy', customer_relationship, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Customer relationship', new_customer_relationship_path

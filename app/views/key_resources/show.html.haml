@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Business model canvase:
+  = @key_resource.business_model_canvase
+%p
+  %b Name:
+  = @key_resource.name
+%p
+  %b Description:
+  = @key_resource.description
+%p
+  %b Updated by:
+  = @key_resource.updated_by
+
+= link_to 'Edit', edit_key_resource_path(@key_resource)
+\|
+= link_to 'Back', key_resources_path

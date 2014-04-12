@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Business model canvase:
+  = @revenue_stream.business_model_canvase
+%p
+  %b Name:
+  = @revenue_stream.name
+%p
+  %b Description:
+  = @revenue_stream.description
+%p
+  %b Updated by:
+  = @revenue_stream.updated_by
+
+= link_to 'Edit', edit_revenue_stream_path(@revenue_stream)
+\|
+= link_to 'Back', revenue_streams_path

@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Business model canvase:
+  = @channel.business_model_canvase
+%p
+  %b Name:
+  = @channel.name
+%p
+  %b Description:
+  = @channel.description
+%p
+  %b Updated by:
+  = @channel.updated_by
+
+= link_to 'Edit', edit_channel_path(@channel)
+\|
+= link_to 'Back', channels_path

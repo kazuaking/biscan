@@ -1,0 +1,25 @@
+%h1 Listing key_partnerships
+
+%table
+  %tr
+    %th Business model canvase
+    %th Name
+    %th Description
+    %th Updated by
+    %th
+    %th
+    %th
+
+  - @key_partnerships.each do |key_partnership|
+    %tr
+      %td= key_partnership.business_model_canvase
+      %td= key_partnership.name
+      %td= key_partnership.description
+      %td= key_partnership.updated_by
+      %td= link_to 'Show', key_partnership
+      %td= link_to 'Edit', edit_key_partnership_path(key_partnership)
+      %td= link_to 'Destroy', key_partnership, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Key partnership', new_key_partnership_path

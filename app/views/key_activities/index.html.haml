@@ -1,0 +1,25 @@
+%h1 Listing key_activities
+
+%table
+  %tr
+    %th Business model canvase
+    %th Name
+    %th Description
+    %th Updated by
+    %th
+    %th
+    %th
+
+  - @key_activities.each do |key_activity|
+    %tr
+      %td= key_activity.business_model_canvase
+      %td= key_activity.name
+      %td= key_activity.description
+      %td= key_activity.updated_by
+      %td= link_to 'Show', key_activity
+      %td= link_to 'Edit', edit_key_activity_path(key_activity)
+      %td= link_to 'Destroy', key_activity, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Key activity', new_key_activity_path

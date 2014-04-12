@@ -1,12 +1,51 @@
 %p#notice= notice
 
-%p
-  %b Name:
-  = @business_model_canvase.name
-%p
-  %b Description:
-  = @business_model_canvase.description
+%h1= @business_model_canvase.name
+%h3= @business_model_canvase.description
 
-= link_to 'Edit', edit_business_model_canvase_path(@business_model_canvase)
-\|
-= link_to 'Back', business_model_canvases_path
+%table.table.table-bordered
+  %tr
+    %td(rowspan=2)
+      %h4 パートナー
+      - @key_partnerships.each do |m|
+        %div= link_to m.name || 'タイトルなし', edit_business_model_canvase_key_partnership_path(@business_model_canvase, m)
+    %td
+      %h4 主要活動
+      - @key_activities.each do |m|
+        %div= link_to m.name || 'タイトルなし', edit_business_model_canvase_key_activity_path(@business_model_canvase, m)
+    %td(rowspan=2 colspan=2)
+      %h4 価値提案
+      - @value_propositions.each do |m|
+        %div= link_to m.name || 'タイトルなし', edit_business_model_canvase_value_proposition_path(@business_model_canvase, m)
+    %td
+      %h4 顧客との関係
+      - @customer_relationships.each do |m|
+        %div= link_to m.name || 'タイトルなし', edit_business_model_canvase_customer_relationship_path(@business_model_canvase, m)
+    %td(rowspan=2)
+      %h4 顧客セグメント
+      - @customer_segments.each do |m|
+        %div= link_to m.name || 'タイトルなし', edit_business_model_canvase_customer_segment_path(@business_model_canvase, m)
+  %tr
+    %td
+      %h4 経営資源
+      - @key_resources.each do |m|
+        %div= link_to m.name || 'タイトルなし', edit_business_model_canvase_key_resource_path(@business_model_canvase, m)
+    %td
+      %h4 チャネル
+      - @channels.each do |m|
+        %div= link_to m.name || 'タイトルなし', edit_business_model_canvase_channel_path(@business_model_canvase, m)
+  %tr
+    %td(colspan=3)
+      %h4 コスト資源
+      - @cost_structures.each do |m|
+        %div= link_to m.name || 'タイトルなし', edit_business_model_canvase_customer_segment_path(@business_model_canvase, m)
+    %td(colspan=3)
+      %h4 収益の流れ
+      - @revenue_streams.each do |m|
+        %div= link_to m.name || 'タイトルなし', edit_business_model_canvase_customer_segment_path(@business_model_canvase, m)
+
+= link_to edit_business_model_canvase_path(@business_model_canvase), class: 'btn' do
+  %i.icon-edit
+= link_to business_model_canvases_path, class: 'btn' do
+  %i.icon-list
+

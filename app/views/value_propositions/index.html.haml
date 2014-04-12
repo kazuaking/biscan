@@ -1,0 +1,25 @@
+%h1 Listing value_propositions
+
+%table
+  %tr
+    %th Business model canvase
+    %th Name
+    %th Description
+    %th Updated by
+    %th
+    %th
+    %th
+
+  - @value_propositions.each do |value_proposition|
+    %tr
+      %td= value_proposition.business_model_canvase
+      %td= value_proposition.name
+      %td= value_proposition.description
+      %td= value_proposition.updated_by
+      %td= link_to 'Show', value_proposition
+      %td= link_to 'Edit', edit_value_proposition_path(value_proposition)
+      %td= link_to 'Destroy', value_proposition, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Value proposition', new_value_proposition_path

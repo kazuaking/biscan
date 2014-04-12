@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Business model canvase:
+  = @value_proposition.business_model_canvase
+%p
+  %b Name:
+  = @value_proposition.name
+%p
+  %b Description:
+  = @value_proposition.description
+%p
+  %b Updated by:
+  = @value_proposition.updated_by
+
+= link_to 'Edit', edit_value_proposition_path(@value_proposition)
+\|
+= link_to 'Back', value_propositions_path

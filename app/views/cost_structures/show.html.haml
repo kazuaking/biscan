@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Business model canvase:
+  = @cost_structure.business_model_canvase
+%p
+  %b Name:
+  = @cost_structure.name
+%p
+  %b Description:
+  = @cost_structure.description
+%p
+  %b Updated by:
+  = @cost_structure.updated_by
+
+= link_to 'Edit', edit_cost_structure_path(@cost_structure)
+\|
+= link_to 'Back', cost_structures_path

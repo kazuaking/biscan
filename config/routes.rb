@@ -1,7 +1,24 @@
 Biscan::Application.routes.draw do
-  resources :customer_segments
 
-  resources :business_model_canvases
+  resources :business_model_canvases do
+    resources :cost_structures
+
+    resources :key_partnerships
+
+    resources :key_activities
+
+    resources :key_resources
+
+    resources :revenue_streams
+
+    resources :customer_relationships
+
+    resources :channels
+
+    resources :value_propositions
+
+    resources :customer_segments
+  end
 
   devise_for :users
   root :to => 'business_model_canvases#index'
