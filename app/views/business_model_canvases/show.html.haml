@@ -36,11 +36,11 @@
     %td(colspan=3)
       %h4 コスト資源
       - @cost_structures.each do |m|
-        %div= link_to m.name || 'タイトルなし', edit_business_model_canvase_customer_segment_path(@business_model_canvase, m)
+        %div= link_to m.name || 'タイトルなし', edit_business_model_canvase_cost_structure_path(@business_model_canvase, m)
     %td(colspan=3)
       %h4 収益の流れ
       - @revenue_streams.each do |m|
-        %div= link_to m.name || 'タイトルなし', edit_business_model_canvase_customer_segment_path(@business_model_canvase, m)
+        %div= link_to m.name || 'タイトルなし', edit_business_model_canvase_revenue_stream_path(@business_model_canvase, m)
 
 = link_to edit_business_model_canvase_path(@business_model_canvase), class: 'btn' do
   %i.icon-edit
