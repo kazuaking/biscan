@@ -43,7 +43,7 @@ class ValuePropositionsController < ApplicationController
   def update
     respond_to do |format|
       if @value_proposition.update(value_proposition_params)
-        format.html { redirect_to @value_proposition, notice: 'Value proposition was successfully updated.' }
+        format.html { redirect_to @business_model_canvase, notice: 'Value proposition was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }

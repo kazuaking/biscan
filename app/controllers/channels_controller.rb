@@ -43,7 +43,7 @@ class ChannelsController < ApplicationController
   def update
     respond_to do |format|
       if @channel.update(channel_params)
-        format.html { redirect_to @channel, notice: 'Channel was successfully updated.' }
+        format.html { redirect_to @business_model_canvase, notice: 'Channel was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }

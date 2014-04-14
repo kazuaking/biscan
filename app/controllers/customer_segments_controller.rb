@@ -43,7 +43,7 @@ class CustomerSegmentsController < ApplicationController
   def update
     respond_to do |format|
       if @customer_segment.update(customer_segment_params)
-        format.html { redirect_to @customer_segment, notice: 'Customer segment was successfully updated.' }
+        format.html { redirect_to @business_model_canvase, notice: 'Customer segment was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }
