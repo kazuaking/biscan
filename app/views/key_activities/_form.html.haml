@@ -1,11 +1,7 @@
 = simple_form_for([@business_model_canvase, @key_activity]) do |f|
-  = f.error_notification
-
   .form-inputs
-    = f.association :business_model_canvase
     = f.input :name
     = f.input :description
-    = f.input :updated_by
 
   .form-actions
     = f.button :submit

@@ -43,7 +43,7 @@ class CostStructuresController < ApplicationController
   def update
     respond_to do |format|
       if @cost_structure.update(cost_structure_params)
-        format.html { redirect_to @cost_structure, notice: 'Cost structure was successfully updated.' }
+        format.html { redirect_to @business_model_canvase, notice: 'Cost structure was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }

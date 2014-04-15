@@ -43,7 +43,7 @@ class RevenueStreamsController < ApplicationController
   def update
     respond_to do |format|
       if @revenue_stream.update(revenue_stream_params)
-        format.html { redirect_to @revenue_stream, notice: 'Revenue stream was successfully updated.' }
+        format.html { redirect_to @business_model_canvase, notice: 'Revenue stream was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }

@@ -43,7 +43,7 @@ class CustomerRelationshipsController < ApplicationController
   def update
     respond_to do |format|
       if @customer_relationship.update(customer_relationship_params)
-        format.html { redirect_to @customer_relationship, notice: 'Customer relationship was successfully updated.' }
+        format.html { redirect_to @business_model_canvase, notice: 'Customer relationship was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }

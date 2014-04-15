@@ -43,7 +43,7 @@ class KeyResourcesController < ApplicationController
   def update
     respond_to do |format|
       if @key_resource.update(key_resource_params)
-        format.html { redirect_to @key_resource, notice: 'Key resource was successfully updated.' }
+        format.html { redirect_to @business_model_canvase, notice: 'Key resource was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }

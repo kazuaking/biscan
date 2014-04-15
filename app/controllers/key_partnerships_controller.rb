@@ -43,7 +43,7 @@ class KeyPartnershipsController < ApplicationController
   def update
     respond_to do |format|
       if @key_partnership.update(key_partnership_params)
-        format.html { redirect_to @key_partnership, notice: 'Key partnership was successfully updated.' }
+        format.html { redirect_to @business_model_canvase, notice: 'Key partnership was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }
