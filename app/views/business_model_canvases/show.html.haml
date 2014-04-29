@@ -6,7 +6,12 @@
     %td(rowspan=2)
       %h4 パートナー
       - @key_partnerships.each do |m|
-        %div= link_to m.name || 'タイトルなし', edit_business_model_canvase_key_partnership_path(@business_model_canvase, m)
+        %div
+          = link_to m.name || 'タイトルなし', edit_business_model_canvase_key_partnership_path(@business_model_canvase, m)
+          = link_to business_model_canvase_key_partnership_path(@business_model_canvase, m), method: :delete, data: { confirm: 'Are you sure?' }  do
+            %i.icon-remove
+      = link_to new_business_model_canvase_key_partnership_path(@business_model_canvase) do
+        %i.icon-plus
     %td
       %h4 主要活動
       - @key_activities.each do |m|
