@@ -25,11 +25,11 @@ class KeyResourcesController < ApplicationController
   # POST /key_resources
   # POST /key_resources.json
   def create
-    @key_resource = KeyResource.new(key_resource_params)
+    @key_resource = @business_model_canvase.key_resources.build(key_resource_params)
 
     respond_to do |format|
       if @key_resource.save
-        format.html { redirect_to @key_resource, notice: 'Key resource was successfully created.' }
+        format.html { redirect_to @business_model_canvase, notice: 'Key resource was successfully created.' }
         format.json { render action: 'show', status: :created, location: @key_resource }
       else
         format.html { render action: 'new' }
@@ -57,7 +57,7 @@ class KeyResourcesController < ApplicationController
   def destroy
     @key_resource.destroy
     respond_to do |format|
-      format.html { redirect_to key_resources_url }
+      format.html { redirect_to @business_model_canvase }
       format.json { head :no_content }
     end
   end

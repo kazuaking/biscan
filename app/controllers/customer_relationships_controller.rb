@@ -25,11 +25,11 @@ class CustomerRelationshipsController < ApplicationController
   # POST /customer_relationships
   # POST /customer_relationships.json
   def create
-    @customer_relationship = CustomerRelationship.new(customer_relationship_params)
+    @customer_relationship = @business_model_canvase.customer_relationships.build(customer_relationship_params)
 
     respond_to do |format|
       if @customer_relationship.save
-        format.html { redirect_to @customer_relationship, notice: 'Customer relationship was successfully created.' }
+        format.html { redirect_to @business_model_canvase, notice: 'Customer relationship was successfully created.' }
         format.json { render action: 'show', status: :created, location: @customer_relationship }
       else
         format.html { render action: 'new' }
@@ -57,7 +57,7 @@ class CustomerRelationshipsController < ApplicationController
   def destroy
     @customer_relationship.destroy
     respond_to do |format|
-      format.html { redirect_to customer_relationships_url }
+      format.html { redirect_to @business_model_canvase }
       format.json { head :no_content }
     end
   end

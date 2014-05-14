@@ -25,11 +25,11 @@ class ChannelsController < ApplicationController
   # POST /channels
   # POST /channels.json
   def create
-    @channel = Channel.new(channel_params)
+    @channel = @business_model_canvase.channels.build(channel_params)
 
     respond_to do |format|
       if @channel.save
-        format.html { redirect_to @channel, notice: 'Channel was successfully created.' }
+        format.html { redirect_to @business_model_canvase, notice: 'Channel was successfully created.' }
         format.json { render action: 'show', status: :created, location: @channel }
       else
         format.html { render action: 'new' }
@@ -57,7 +57,7 @@ class ChannelsController < ApplicationController
   def destroy
     @channel.destroy
     respond_to do |format|
-      format.html { redirect_to channels_url }
+      format.html { redirect_to @business_model_canvase }
       format.json { head :no_content }
     end
   end

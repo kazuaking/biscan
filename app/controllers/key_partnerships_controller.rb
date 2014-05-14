@@ -33,7 +33,7 @@ class KeyPartnershipsController < ApplicationController
         format.json { render action: 'show', status: :created, location: @business_model_canvase }
       else
         format.html { render action: 'new' }
-        format.json { render json: @business_model_canvase.errors, status: :unprocessable_entity }
+        format.json { render json: @key_partnership.errors, status: :unprocessable_entity }
       end
     end
   end

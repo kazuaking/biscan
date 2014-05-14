@@ -25,11 +25,11 @@ class CustomerSegmentsController < ApplicationController
   # POST /customer_segments
   # POST /customer_segments.json
   def create
-    @customer_segment = CustomerSegment.new(customer_segment_params)
+    @customer_segment = @business_model_canvase.customer_segments.build(customer_segment_params)
 
     respond_to do |format|
       if @customer_segment.save
-        format.html { redirect_to @customer_segment, notice: 'Customer segment was successfully created.' }
+        format.html { redirect_to @business_model_canvase, notice: 'Customer segment was successfully created.' }
         format.json { render action: 'show', status: :created, location: @customer_segment }
       else
         format.html { render action: 'new' }
@@ -57,7 +57,7 @@ class CustomerSegmentsController < ApplicationController
   def destroy
     @customer_segment.destroy
     respond_to do |format|
-      format.html { redirect_to customer_segments_url }
+      format.html { redirect_to @business_model_canvase }
       format.json { head :no_content }
     end
   end

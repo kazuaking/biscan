@@ -25,11 +25,11 @@ class KeyActivitiesController < ApplicationController
   # POST /key_activities
   # POST /key_activities.json
   def create
-    @key_activity = KeyActivity.new(key_activity_params)
+    @key_activity = @business_model_canvase.key_activities.build(key_activity_params)
 
     respond_to do |format|
       if @key_activity.save
-        format.html { redirect_to @key_activity, notice: 'Key activity was successfully created.' }
+        format.html { redirect_to @business_model_canvase, notice: 'Key activity was successfully created.' }
         format.json { render action: 'show', status: :created, location: @key_activity }
       else
         format.html { render action: 'new' }
@@ -57,7 +57,7 @@ class KeyActivitiesController < ApplicationController
   def destroy
     @key_activity.destroy
     respond_to do |format|
-      format.html { redirect_to key_activities_url }
+      format.html { redirect_to @business_model_canvase }
       format.json { head :no_content }
     end
   end
