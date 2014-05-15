@@ -25,11 +25,11 @@ class CostStructuresController < ApplicationController
   # POST /cost_structures
   # POST /cost_structures.json
   def create
-    @cost_structure = CostStructure.new(cost_structure_params)
+    @cost_structure = @business_model_canvase.cost_structures.build(cost_structure_params)
 
     respond_to do |format|
       if @cost_structure.save
-        format.html { redirect_to @cost_structure, notice: 'Cost structure was successfully created.' }
+        format.html { redirect_to @business_model_canvase, notice: 'Cost structure was successfully created.' }
         format.json { render action: 'show', status: :created, location: @cost_structure }
       else
         format.html { render action: 'new' }
@@ -57,7 +57,7 @@ class CostStructuresController < ApplicationController
   def destroy
     @cost_structure.destroy
     respond_to do |format|
-      format.html { redirect_to cost_structures_url }
+      format.html { redirect_to @business_model_canvase }
       format.json { head :no_content }
     end
   end

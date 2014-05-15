@@ -25,12 +25,12 @@ class KeyPartnershipsController < ApplicationController
   # POST /key_partnerships
   # POST /key_partnerships.json
   def create
-    @key_partnership = KeyPartnership.new(key_partnership_params)
+    @key_partnership = @business_model_canvase.key_partnerships.build(key_partnership_params)
 
     respond_to do |format|
       if @key_partnership.save
-        format.html { redirect_to @key_partnership, notice: 'Key partnership was successfully created.' }
-        format.json { render action: 'show', status: :created, location: @key_partnership }
+        format.html { redirect_to @business_model_canvase, notice: 'Key partnership was successfully created.' }
+        format.json { render action: 'show', status: :created, location: @business_model_canvase }
       else
         format.html { render action: 'new' }
         format.json { render json: @key_partnership.errors, status: :unprocessable_entity }
@@ -57,7 +57,7 @@ class KeyPartnershipsController < ApplicationController
   def destroy
     @key_partnership.destroy
     respond_to do |format|
-      format.html { redirect_to key_partnerships_url }
+      format.html { redirect_to @business_model_canvase }
       format.json { head :no_content }
     end
   end

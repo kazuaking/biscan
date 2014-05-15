@@ -7,8 +7,8 @@
 
 * ruby  2.1
 * bundler
-* development = mysql
-* production = posgressql
+* development = mysql(posgressqlを入れるのがめんどくさいから)
+* production = posgressql(mysqlはheroku上プラグインだから)
 
 * rails 4.04
 
@@ -42,6 +42,7 @@ for develop
 #### 基本構造
 
 | カラム | colmun      | type      |
+| ---    | ---         | ---       |
 | 名前   | name        |  string   |
 | 詳細   | description | text      |
 | 更新者  | updated_by | accocetion |
@@ -59,13 +60,19 @@ b rails g migration CreateCustomerSegments business_model_canvases:references na
 
 ### TODO
 
-* twitter biitstrap
-* login機能
+* 日本語化
+* プロジェクト名の変更 (biscan->bizcan)
 * 履歴機能
-* ビジネスモデルキャンバスの登録
-* ビジネスモデルキャンバスの更新
-* ビジネスモデルキャンバスの履歴参照
 * 更新時のメール送信
+* angularJS化 or TruboLink化
+ * view上のみで、各モデルの登録/変更を可能にする
+ * view上のみで、ビジネスモデルキャンバスの登録/変更を可能にする
+ * http://tech.gmo-media.jp/post/70940891525/angularjs-on-rails
+* 各モデルをmasterの扱いにして、同じnameのものは使い回せるようにする
+* Rails4.1対応
+
+* マージ機能を考える
+
 
 
 

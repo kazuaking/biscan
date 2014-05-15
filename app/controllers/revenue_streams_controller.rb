@@ -25,11 +25,11 @@ class RevenueStreamsController < ApplicationController
   # POST /revenue_streams
   # POST /revenue_streams.json
   def create
-    @revenue_stream = RevenueStream.new(revenue_stream_params)
+    @revenue_stream = @business_model_canvase.revenue_streams.build(revenue_stream_params)
 
     respond_to do |format|
       if @revenue_stream.save
-        format.html { redirect_to @revenue_stream, notice: 'Revenue stream was successfully created.' }
+        format.html { redirect_to @business_model_canvase, notice: 'Revenue stream was successfully created.' }
         format.json { render action: 'show', status: :created, location: @revenue_stream }
       else
         format.html { render action: 'new' }
@@ -57,7 +57,7 @@ class RevenueStreamsController < ApplicationController
   def destroy
     @revenue_stream.destroy
     respond_to do |format|
-      format.html { redirect_to revenue_streams_url }
+      format.html { redirect_to @business_model_canvase }
       format.json { head :no_content }
     end
   end

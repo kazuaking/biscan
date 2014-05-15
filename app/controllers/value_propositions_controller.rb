@@ -25,11 +25,11 @@ class ValuePropositionsController < ApplicationController
   # POST /value_propositions
   # POST /value_propositions.json
   def create
-    @value_proposition = ValueProposition.new(value_proposition_params)
+    @value_proposition = @business_model_canvase.value_propositions.build(value_proposition_params)
 
     respond_to do |format|
       if @value_proposition.save
-        format.html { redirect_to @value_proposition, notice: 'Value proposition was successfully created.' }
+        format.html { redirect_to @business_model_canvase, notice: 'Value proposition was successfully created.' }
         format.json { render action: 'show', status: :created, location: @value_proposition }
       else
         format.html { render action: 'new' }
@@ -57,7 +57,7 @@ class ValuePropositionsController < ApplicationController
   def destroy
     @value_proposition.destroy
     respond_to do |format|
-      format.html { redirect_to value_propositions_url }
+      format.html { redirect_to @business_model_canvase }
       format.json { head :no_content }
     end
   end
