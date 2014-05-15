@@ -42,6 +42,7 @@ for develop
 #### 基本構造
 
 | カラム | colmun      | type      |
+| ---    | ---         | ---       |
 | 名前   | name        |  string   |
 | 詳細   | description | text      |
 | 更新者  | updated_by | accocetion |
@@ -66,6 +67,7 @@ b rails g migration CreateCustomerSegments business_model_canvases:references na
 * angularJS化 or TruboLink化
  * view上のみで、各モデルの登録/変更を可能にする
  * view上のみで、ビジネスモデルキャンバスの登録/変更を可能にする
+ * http://tech.gmo-media.jp/post/70940891525/angularjs-on-rails
 * 各モデルをmasterの扱いにして、同じnameのものは使い回せるようにする
 * Rails4.1対応
 
